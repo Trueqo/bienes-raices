@@ -5,15 +5,17 @@ import userRoutes from './routes/userRoutes.js'
 //Crear app
 const app = express()
 
+//habilitando pug
+app.set('view engine', 'pug')
+app.set('views', './views')
+
+
+//carpeta pública
+app.use(express.static('public'))
+
+
 //routing
-app.get('/',userRoutes)
-
-
-
-app.get('/', (req, res) => {
-    res.send('Servidor de bienes-raices')
-})
-
+app.use('/auth',userRoutes)
 
 //puerto para arrancar el proyecto
 const port = 3000;
