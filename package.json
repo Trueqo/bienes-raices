@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "css":"postcss public/css/tailwind.css -o public/css/app.css --watch"
+    "css": "postcss public/css/tailwind.css -o public/css/app.css --watch"
   },
   "repository": {
     "type": "git",
@@ -28,8 +28,12 @@
   },
   "homepage": "https://github.com/Trueqo/bienes-raices#readme",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "pug": "^3.0.2"
+    "express-validator": "^6.14.2",
+    "mysql2": "^2.3.3",
+    "pug": "^3.0.2",
+    "sequelize": "^6.21.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
